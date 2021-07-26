@@ -19,6 +19,13 @@
             <groupId>com.google.truth</groupId>
             <artifactId>truth</artifactId>
             <version>0.30</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.google.cloud</groupId>
@@ -26,4 +33,27 @@
             <version>1.90.0</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <executions>
+                    <execution>
+                        <id>enforce</id>
+                        <configuration>
+                            <rules>
+                                <dependencyConvergence/>
+                            </rules>
+                        </configuration>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

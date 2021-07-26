@@ -50,13 +50,15 @@
                 <artifactId>google-http-client-jackson2</artifactId>
                 <version>1.21.0</version>
             </dependency>
-            <!--
+
             <dependency>
                 <groupId>io.grpc</groupId>
-                <artifactId>grpc-stub</artifactId>
-                <version>1.10.1</version>
+                <artifactId>grpc-bom</artifactId>
+                <version>1.23.0</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
-            -->
+
             <dependency>
                 <groupId>com.google.api</groupId>
                 <artifactId>api-common</artifactId>

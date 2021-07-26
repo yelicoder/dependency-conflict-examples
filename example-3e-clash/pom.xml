@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M2</version>
+                <version>3.0.0-M3</version>
 
                 <executions>
                     <execution>
@@ -63,7 +63,27 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <requireUpperBoundDeps/>
+                                <!--requireUpperBoundDeps/-->
+                                <banDuplicateClasses>
+                                    <findAllDuplicates>true</findAllDuplicates>
+                                    <ignoreWhenIdentical>true</ignoreWhenIdentical>
+                                </banDuplicateClasses>
+
+                                <!--banDuplicateClasses>
+                                    <ignoreClasses>
+
+                                        <ignoreClass>com.xyz.i18n.Messages</ignoreClass>
+
+
+                                        <ignoreClass>org.apache.commons.logging.*</ignoreClass>
+                                    </ignoreClasses>
+                                    <scopes>
+                                        <scope>compile</scope>
+                                        <scope>provided</scope>
+                                    </scopes>
+                                    <findAllDuplicates>true</findAllDuplicates>
+                                    <ignoreWhenIdentical>true</ignoreWhenIdentical>
+                                </banDuplicateClasses-->
                             </rules>
                         </configuration>
                     </execution>
