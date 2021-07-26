@@ -50,4 +50,7 @@ java.lang.NoClassDefFoundError: io/grpc/MethodDescriptor$PrototypeMarshaller
 ### Linkage Checker
 https://github.com/GoogleCloudPlatform/cloud-opensource-java/wiki/Linkage-Checker-Enforcer-Rule
 
+### Best Practice
+* JLBP.dev
+
 
